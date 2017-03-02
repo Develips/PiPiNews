@@ -85,9 +85,9 @@ public class NewsFragment extends Fragment implements OnTabSelectListener {
         tabLayout_4.setViewPager(vp);
         vp.setCurrentItem(0);
 //小红点
-//        tabLayout_4.showDot(4);
-//        tabLayout_4.showMsg(3, 5);
-//        tabLayout_4.setMsgMargin(3, 0, 10);
+        tabLayout_4.showDot(2);
+        tabLayout_4.showMsg(0, 5);
+        tabLayout_4.setMsgMargin(0, 35, 10);
 //        MsgView rtv_2_3 = tabLayout_4.getMsgView(3);
 //        if (rtv_2_3 != null) {
 //            rtv_2_3.setBackgroundColor(Color.parseColor("#6D8FB0"));
@@ -109,12 +109,12 @@ public class NewsFragment extends Fragment implements OnTabSelectListener {
 
     @Override
     public void onTabSelect(int position) {
-        Toast.makeText(mContext, "onTabSelect&position--->" + position, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext, "onTabSelect&position--->" + position, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onTabReselect(int position) {
-        Toast.makeText(mContext, "onTabReselect&position--->" + position, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext, "onTabReselect&position--->" + position, Toast.LENGTH_SHORT).show();
     }
 
 //    private class MyPagerAdapter extends FragmentPagerAdapter {

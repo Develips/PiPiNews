@@ -45,26 +45,26 @@ public class NewsJsonUtils {
             //获取整个JsonArray
             JsonArray jsonArray = jsonElement.getAsJsonArray();
 
-            /******************-----bingo-----********************/
-            System.out.println("获取value："+value);
-            /**头条轮播图片获取**/
-            if (("T1348647909107").equals(value)){
-                //广告轮播的数据
-                JsonObject jo000 = jsonArray.get(0).getAsJsonObject();
-                System.out.println("获取JsonObject："+jo000.toString());
-                JsonArray array=jo000.get("ads").getAsJsonArray();    //得到为jo000的数组
-                System.out.println("获取ads的数组："+array.toString());
-                if (jo000.has("ads")) {
-                    for(int i=0;i<array.size();i++){
-                        JsonObject subObject=array.get(i).getAsJsonObject();
-                        System.out.println("title="+subObject.get("title").getAsString());
-                        System.out.println("tag="+subObject.get("tag").getAsString());
-                        System.out.println("url="+subObject.get("url").getAsString());
-                        System.out.println("imgsrc="+subObject.get("imgsrc").getAsString());
-                    }
-                }
-            }
-            /******************-----end-----********************/
+//            /******************-----bingo-----********************/
+//            System.out.println("获取value："+value);
+//            /**头条轮播图片获取**/
+//            if (("T1348647909107").equals(value)){
+//                //广告轮播的数据
+//                JsonObject jo000 = jsonArray.get(0).getAsJsonObject();
+//                System.out.println("获取JsonObject："+jo000.toString());
+//                JsonArray array=jo000.get("ads").getAsJsonArray();    //得到为jo000的数组
+//                System.out.println("获取ads的数组："+array.toString());
+//                if (jo000.has("ads")) {
+//                    for(int i=0;i<array.size();i++){
+//                        JsonObject subObject=array.get(i).getAsJsonObject();
+//                        System.out.println("title="+subObject.get("title").getAsString());
+//                        System.out.println("tag="+subObject.get("tag").getAsString());
+//                        System.out.println("url="+subObject.get("url").getAsString());
+//                        System.out.println("imgsrc="+subObject.get("imgsrc").getAsString());
+//                    }
+//                }
+//            }
+//            /******************-----end-----********************/
 
             for (int i = 1; i < jsonArray.size(); i++) {
                 JsonObject jo = jsonArray.get(i).getAsJsonObject();
