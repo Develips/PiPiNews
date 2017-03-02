@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical">
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/convenientBanner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/appbar"
+            app:canLoop="true"/>
+
+        <com.slpcode.baselib.tablayout.SlidingTabLayout
+            android:id="@+id/sliding_tab"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="#FFFFFF"
+            app:tl_textUnselectColor="@color/tab_textUnselect"
+            app:tl_textSelectColor="@color/tab_textSelect"
+            app:tl_indicator_color="@color/tab_textSelect"
+            app:tl_tab_space_equal="true"
+            app:tl_textAllCaps="true"
+            app:tl_textBold="true"
+            app:tl_textsize="15sp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>
